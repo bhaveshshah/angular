@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Angular Practice</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="">
+        <a routerLink="">Home</a>
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/googleMaps">Google Maps </a>
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/showEvents">Show Events </a>
+        <!-- <a [routerLink]="['showUser', user.id]">Show User </a> -->
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/showUser">Show User </a>
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/showPipes">Show Pipe </a>
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/showFavroites">Show Favroites </a>
+      </li>
+      <li routerLinkActive="active current">
+        <a routerLink="/reactiveForms">Reactive Forms </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

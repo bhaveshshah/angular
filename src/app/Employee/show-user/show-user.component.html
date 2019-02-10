@@ -1,0 +1,26 @@
+<div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userData">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td><img [src]="user.avatar" width="48px" height="48px" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="pagination">
+    <li routerLinkActive="active current"><a [routerLink]="['/showUser', 1]">1</a></li>
+    <li routerLinkActive="active current"><a [routerLink]="['/showUser', 2]">2</a></li>
+    <li routerLinkActive="active current"><a [routerLink]="['/showUser', 3]">3</a></li>
+  </ul>
+</div>

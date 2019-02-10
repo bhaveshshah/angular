@@ -1,14 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-sm">
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"> </agm-map>
-    </div>
-    <div class="col-sm">
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"> </agm-map>
-    </div>
-    <div class="col-sm">
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      <agm-map
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+      >
+        <agm-marker
+          *ngFor="let hotel of hotels"
+          [latitude]="hotel.location.latitude"
+          [longitude]="hotel.location.longitude"
+          [title]="hotel.name"
+          [label]="{
+            color: 'white',
+            fontSize: '11px',
+            fontWeight: 'bold',
+            text: callme(hotel.total_price)
+          }"
+          [iconUrl]="iconUrl"
+        ></agm-marker>
       </agm-map>
     </div>
   </div>
